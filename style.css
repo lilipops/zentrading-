@@ -1,0 +1,287 @@
+/* variables */
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.social-container {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  text-align: center;
+  padding-bottom: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+}
+.social-title {
+  padding: 50px 0 30px 0;
+  color: #fff;
+ 
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 300;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.6), 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+.social-logo {
+  padding: 50px 0 20px 0;
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  font-size: 55px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 500;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.6), 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+.zen-trading {
+  color: black;
+
+}
+
+.media-agency {
+  color: red;
+}
+
+.social-item {
+  z-index: 999;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 9px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.8);
+}
+.social-item:hover {
+  transition: 0.3s ease all;
+  border: none;
+  box-shadow: none;
+}
+.social-item.current {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+.social-icon {
+  transition: all 0.3s ease-in-out;
+  font-size: 54px;
+  padding-top: 18px;
+  color: #fff;
+}
+
+#link-wrapper {
+  display: block;
+  padding: 12px 0 60px 0;
+}
+#link-wrapper .link {
+  /* visibility: hidden; */
+  opacity: 0;
+  text-decoration: none;
+  background-color: #1e1e1e;
+  color: #aaa;
+  padding: 10px 50px;
+  border-radius: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+#link-wrapper .link:hover {
+  transition: all 0.5s ease-in-out;
+  color: white;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+#link-wrapper .link--visibility {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* social media colors */
+.github-color {
+  background-color: #ff0000;
+}
+
+.facebook-color {
+  background-color: #ff0303;
+}
+
+.codepen-color {
+  background-color: #000000;
+}
+
+.google-color {
+  background-color: #000000;
+}
+
+.website-color {
+  background-color: #000000;
+}
+
+.twitter-color {
+  background-color: #ff0606;
+}
+
+.instagram-color {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+} 
+/* Position the logo in the bottom right corner */
+/* Position the logo independently in the bottom right corner */
+.custom-logo-placeholder {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  background-color: transparent; /* Transparent background */
+}
+
+/* Style the custom logo image */
+.custom-logo-placeholder .custom-logo-icon {
+  max-width: 25%; /* Make the image scale to fit the container */
+  max-height: 25%; /* Ensure the image stays within the bounds */
+  object-fit: cover; /* Maintain the aspect ratio and fill the container */
+  border-radius: 50%; /* Make the logo image circular */
+}
+
+/* Responsive adjustments for the custom logo */
+@media only screen and (max-width: 690px) {
+  .custom-logo-placeholder {
+    bottom: 10px;
+    right: 10px;
+  }
+  .custom-logo-placeholder .custom-logo-icon {
+    width: 60px; /* Adjust the size of the logo on small screens */
+    height: 60px;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 15px 0; /* Add space inside the footer */
+  font-size: 14px; /* Adjust text size */
+  position: fixed; /* Keep footer at the bottom */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    font-size: 12px; /* Adjust font size for small screens */
+  }
+}
+
+/* Responsive Components */
+@media only screen and (max-width: 1200px) {
+  .social-title {
+    font-size: 32px;
+  }
+
+  .social-icon {
+    position: relative;
+    font-size: 36px;
+    padding-top: 12px;
+  }
+
+  .social-item {
+    width: 60px;
+    height: 60px;
+    margin: 0 6px;
+  }
+  .social-item, .social-item.current {
+    transition: all 0.3s ease-in-out, margin 0.3s ease-in-out 0.3s, border-radius 0.3s ease-in-out;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .social-title {
+    font-size: 32px;
+  }
+
+  .social-icon {
+    position: relative;
+    font-size: 36px;
+    padding-top: 12px;
+  }
+
+  .social-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    border: none;
+    margin: 1.5px 0;
+  }
+  .social-item, .social-item.current {
+    transition: margin 0.3s ease-in-out, border-radius 0.3s ease-in-out 0.3s, width 1s ease-in-out;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .social-item {
+    width: 100px;
+  }
+  .social-item, .social-item.current {
+    transition: width 1s ease-in-out;
+  }
+}
+#version2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 1.5s color ease;
+}
+#version2, #version2:visited, #version2:hover, #version2:active {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: 0.8s color ease;
+  text-decoration: none;
+  color: #1de9b6;
+}
+#version2:hover {
+  color: lime;
+}
+#version2:before, #version2:after {
+  content: "";
+  transition: 0.5s all ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  height: 0.2rem;
+  width: 0;
+  background: lime;
+  left: 0;
+}
+#version2:before {
+  top: -0.25em;
+}
+#version2:after {
+  bottom: -0.25em;
+}
+#version2:hover:before, #version2:hover:after {
+  width: 100%;
+  transition: 0.8s all ease;
+}
